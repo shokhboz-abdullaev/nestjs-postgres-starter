@@ -15,6 +15,13 @@ async function bootstrap() {
 	);
 	app.useGlobalInterceptors(new TransformInterceptor());
 
-	await app.listen(3000);
+	const port = config.getPort() || 5050;
+	await app.listen(port, () => {
+		console.log(
+			'\n',
+			'\x1b[33m',
+			`Listening on port: ${port}. Please head over to http://localhost:${port}/api for Swagger docs.`,
+		);
+	});
 }
 bootstrap();
