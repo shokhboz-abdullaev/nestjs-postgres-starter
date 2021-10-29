@@ -1,10 +1,10 @@
 
-<center>
+<p align="middle" float="left">
       <img  width="140px" src="https://www.vectorlogo.zone/logos/nestjs/nestjs-icon.svg"/>
       <img  width="140px" src="https://wiki.postgresql.org/images/a/a4/PostgreSQL_logo.3colors.svg"/>
       <img  width="140px" src="https://img.stackshare.io/service/7419/20165699.png"/>
       <img  width="140px" src="https://iconape.com/wp-content/files/kd/371533/svg/371533.svg"/>
-</center>
+</p>
 
 ## Description
 
@@ -57,7 +57,7 @@ $ npm run typeorm:migration:run
 Folders like _src/scripts_, _src/migrations_ are essential for auto migration.
 
 
-## Stay in touch with Repo Author.
+## Stay in touch.
 
 - Author: [Shokhboz Abdullaev](https://shox-pro.com)
 
