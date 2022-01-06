@@ -1,6 +1,7 @@
 import { MergableConfig } from '../interfaces/mergable-config.interface';
 import { TypeOrmModuleOptions } from '@nestjs/typeorm';
 import { ConfigService } from '../config.service';
+import { join } from 'path';
 
 export default {
 	token: 'typeorm.config',
@@ -23,9 +24,7 @@ export default {
 			username: context.getValue('POSTGRES_USER'),
 			password: context.getValue('POSTGRES_PASSWORD'),
 			database: context.getValue('POSTGRES_DB'),
-			entities: [
-				context.isProduction() ? 'dist/**/*.entity.js' : 'src/**/*.entity{.ts,.js}',
-			],
+			entities: [join(__dirname, '../..', '**/*.entity{.ts,.js}')],
 
 			migrationsTableName: 'migrations',
 
